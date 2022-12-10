@@ -59,13 +59,15 @@ body{
 #carte{
     height: 400px;
     aspect-ratio: 30 / 43;
-    background: radial-gradient(circle, #9ac652, #7eac0a );
+    /* background: radial-gradient(circle, #9ac652, #7eac0a ); */
     border-radius: 13px;
     border: 10px solid #ffe368;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+
+    z-index: 2;
     
 
 }
@@ -85,5 +87,12 @@ body{
     margin: auto;
     margin-top: 4px;
     margin-bottom: 4px;
+
+}
+
+
+#pokemon_container svg{
+    position: absolute;
+    z-index: 1;
 
 }

@@ -17,11 +17,33 @@
     </form>
 
     <div id="pokemon_container">
+
+         <svg id="noise"
+            xmlns='http://www.w3.org/2000/svg'
+            xmlns:xlink='http://www.w3.org/1999/xlink'
+            style="width:300px;aspect-ratio: 30/40;">
+
+            <filter id='n' x='0' y='0'>
+                    <feTurbulence
+                    type='fractalNoise'
+                    baseFrequency='0.01'
+                    numOctaves='5'
+                    stitchTiles='stitch'/>
+            </filter>
+
+            <rect width='300' height="400" fill="#9ac652"/>
+            <rect width='300' height='400' filter="url(#n)" opacity='0.7'  style="mix-blend-mode:hard-light;" />
+        </svg>
+
+
         <div id="carte">
             <h1>Bulbizarre</h1>
             <img id="img_pokemon"src="img/bulbizarre.png" alt="">
         </div>
     </div>
+
+
+       
    
 </body>
 </html>
