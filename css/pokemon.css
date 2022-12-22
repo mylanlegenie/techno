@@ -8,6 +8,7 @@ body{
     height: 100vh;
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
+    font-family: sans-serif;
 }
 
 @keyframes gradient{
@@ -105,8 +106,6 @@ body{
 
 #carte h1{
 
-
-    font-family: sans-serif;
     font-size: 20px;
 }
 
@@ -153,7 +152,6 @@ body{
 }
 
 #carte-header p:last-of-type{
-    font-family: sans-serif;
     font-weight: bold;
     font-size: 20px;
 }
@@ -167,7 +165,6 @@ body{
     font-size: 6.5px;
     color: #626164;
     margin:0px;
-    font-family: sans-serif;
     width: 100%;
     text-align: center;
     background: linear-gradient( 90deg,rgb(185, 185, 185), var(--blanc), var(--blanc), var(--blanc), rgb(185, 185, 185));
@@ -188,11 +185,12 @@ body{
     margin-top: 40px;
     display: grid;
     grid-template-columns: 3fr 9fr 1fr;
+    grid-template-rows: 30px;
     align-items: center;
     justify-items: left;
-    font-family: sans-serif;
     font-weight: bold;
     width: 96%;
+    height: 100px;
 }
 
 .atk_img{
@@ -207,7 +205,61 @@ body{
 }
 
 
-#normal{
+.normal{
     border-radius: 50px;
     border: none;
+}
+
+
+#footer img{
+    height: 13px;
+    width: 13px;
+}
+
+#footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 10px;
+    width: 100%;
+}
+
+#footer div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+#footer p{
+    margin : 4px 4px;
+}
+
+#footer > div{
+    background-color:white;
+    border-radius: 10px;
+    padding: 0px;
+    box-shadow: 1px 1px 2px rgb(45, 45, 45);
+}
+
+#resistance{
+    border-left: 1px solid grey;
+    padding-left: 3px;
+}
+
+#description{
+    font-size:  8px;
+    text-align: left;
+    color: rgb(78, 76, 76);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#description div{
+    width: 100%;
 }
