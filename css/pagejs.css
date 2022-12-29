@@ -1,0 +1,72 @@
+#h1{
+    text-align: center;
+}
+
+#h2{
+    text-align: center;
+}
+
+#div_li{
+    text-align: center;
+}
+
+#div_form{
+    text-align: center;
+}
+
+input{
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 7px;
+}
+
+#input_prenom, #input_nom, #input_mail{
+    width: 230px;
+}
+
+
+
+
+#input_envoyer{
+    background-color: white;
+    width: 243px;
+    margin-bottom: 30px;
+}
+
+#input_date{
+    width:227px;
+}
+
+
+#myform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#myform > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+
+}
+
+#sexe{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    border: 1px solid black;
+    width: 230px;
+    border-radius: 20px;
+    padding: 7px;
+    font-size: 15px;
+} 
+
+input[type="radio"] {
+    margin: 0px;
+}

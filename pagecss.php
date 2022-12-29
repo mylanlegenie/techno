@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <link rel="stylesheet" href="css/pagecss.css">
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="website icon" type="png" href="img/logo2.png">
 </head>
 <body>
     <?php include "html/nav.html" ?>
@@ -24,22 +23,22 @@
     <div id="div_form">
         <form action="" id="myform">
             <div>
-                <label for="">Prénom</label>
+                <label id="label_prenom" for="">Prénom</label>
                 <input id="input_prenom" placeholder="Entrez votre prénom" type="text">
             </div>
            
             <div>
-                <label for="" >Nom</label>
+                <label id="label_nom" for="" >Nom</label>
                 <input id="input_nom" placeholder="Entrez votre nom" type="text">
             </div>
 
             <div>
-                <label for="">Adresse E-Mail</label>
+                <label id="label_mail" for="">Adresse E-Mail</label>
                 <input id="input_mail" placeholder="Entrez votre adresse e-mail" type="email">
             </div>
         
             <div>
-                <label for="">Sexe</label>
+                <label id="label_sexe" for="">Sexe</label>
                 <div id="sexe">
                     <div>
                         <input placeholder="" type="radio" name="sexe" value="male">
@@ -54,21 +53,20 @@
                     <div>
                         <input placeholder="" type="radio" name="sexe" value="autre">
                         <label for="">Autre</label>
-                    </div>
-                   
-                    
-                </div>
-                
+                    </div>   
             </div>
-            
-            <div>
+            </div>
+            <div id="date">
                 <label for="">Date de Naissance</label>
                 <input id="input_date" type="date">
             </div>
-            
-            <input id="input_envoyer" type="submit" value="Envoyer">
+                <input id="input_envoyer" type="submit" value="Envoyer"> 
         </form>
-</div>
-<?php include "html/footer.html"?>
+    </div> 
+
+    <div id="footer1" style="border-top:1px solid black; height:150px;">
+        <?php  include "html/footer.html"?>
+    </div>
+
 </body>
 </html>

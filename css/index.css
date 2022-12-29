@@ -1,17 +1,65 @@
-#div_diapo1{
-    
+body{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: -24px;
+    background-color: rgba(22, 22, 40, 0.96);
 }
 
-#h1{
+h3{
     text-align: center;
-    font-size: 36px;
+    font-size: 30px;
+    font-family: consolas;
 }
 
-#h2{
+#footer_{
+    color:white;
+    margin-top: 330px;
+}
+
+#tout{
+    width: 100%;
+    color: white;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#p{
+p{
     text-align: center;
     font-size: 18px;
+    font-family: consolas;
+}
+
+.anim{
+    position: relative;
+    -webkit-box-reflect: below -12px linear-gradient(transparent, black);
+    margin-bottom: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.anim div{
+    margin-right: 20px;
+}
+.anim h2{
+    display: inline-block;
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    animation: animate 1s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+    font-family: consolas;   
+}
+
+@keyframes animate{
+    0%{
+        transform:translateY(0px);
+    }
+    20%{
+        transform:translateY(-30px);
+    }
+    40%,100%{
+        transform:translatey(0px);
+    }
 }
