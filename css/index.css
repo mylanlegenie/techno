@@ -13,7 +13,7 @@ h3{
 
 #footer_{
     color:white;
-    margin-top: 330px;
+    margin-top: 250px;
 }
 
 #tout{
@@ -33,7 +33,7 @@ p{
 
 .anim{
     position: relative;
-    -webkit-box-reflect: below -12px linear-gradient(transparent, black);
+    -webkit-box-reflect: below -60px linear-gradient(transparent, black);
     margin-bottom: 70px;
     display: flex;
     align-items: center;

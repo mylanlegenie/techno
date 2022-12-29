@@ -1,3 +1,11 @@
+body{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: -24px;
+    background-color: rgba(22, 22, 40, 0.96);
+    color: white;
+}
+
 #h1{
     text-align: center;
 }
@@ -6,67 +14,170 @@
     text-align: center;
 }
 
+.conditions{
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.conditions:hover{
+    opacity: 0.6;
+}
+
 #div_li{
     text-align: center;
+    flex-direction: column;
+}
+#footer1{
+    margin-top: 760px;
 }
 
 #div_form{
     text-align: center;
+    border: 3px solid white;
+    width: 300px;
+    border-radius: 40px;
+    padding: 40px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 310px;
+    transition: 0.5s;
 }
 
-input{
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 7px;
+#div_form:hover{
+    border:3px solid #45ced0;
+    width: 350px;
+
 }
 
 #input_prenom, #input_nom, #input_mail{
     width: 230px;
-}
-
-
-
-
-#input_envoyer{
-    background-color: white;
-    width: 243px;
-    margin-bottom: 30px;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 7px;
 }
 
 #input_date{
     width:227px;
 }
 
+label{
+    font-weight: 500;
+}
 
-#myform{
+#myform{ 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#myform > div{
+#myform > div:not(#date):not(#checkbox){
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 10px 0px;
+}
 
+input[type="radio"]{
+    margin: 0px;
+}
+
+#input_envoyer{
+    width: 243px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    background-color: #1f1f30;
+    color: black;
+    background-color: white;
+    transition: 0.5s;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 7px;
+}
+
+#input_prenom,#input_nom,#input_mail{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    outline: none;
+    color: white;
+    border-radius : 24px;
+    transition: 0.25s;
 }
 
 #sexe{
+    border: 0;
+    background: none;
     display: flex;
-    flex-direction: row;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
     justify-content: space-around;
     align-items: center;
-    margin-top: 10px;
-    border: 1px solid black;
+    outline: none;
+    color: white;
     width: 230px;
-    border-radius: 20px;
-    padding: 7px;
+    border-radius: 24px;
     font-size: 15px;
+    transition: 0.25s;
 } 
 
-input[type="radio"] {
+#input_date{
+    width:230px;
+    background: none;
+    color: white;
+    padding: 14px 10px;
+    border: 2px solid #3498db;
+    border-radius: 24px;
+    transition: 0.25s;
+
+}
+
+#input_prenom:focus,#input_nom:focus,#input_mail:focus,#sexe:hover,#input_date:hover{
+    width: 280px;
+    border-color: #45ced0;
+}
+
+#label_prenom, #label_nom, #label_mail{
+    margin-top: -30px;
+    margin-bottom: -10px;
+}
+
+#label_sexe{
+    margin-top: -30px;
+}
+label{
+    margin-bottom: 10px;
+}
+
+#input_envoyer:hover{
+    background: black;
+    color: white;
+    border: 2px solid #45ced0;
+    width: 280px;
+    padding: 14px 10px;
+}
+
+
+#checkbox{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px;
+    align-items: center;
+}
+
+#checkbox input{
+    margin-right: 10px;
+}
+
+#checkbox label{
     margin: 0px;
 }

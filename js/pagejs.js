@@ -1,3 +1,5 @@
+let etat = "masqué";
+let conditions = document.getElementsByClassName('conditions')[0];
 
 
 
@@ -10,8 +12,34 @@ function cacher() {
   document.getElementById('div_li').style.display = 'none';
 }
 
-button.addEventLister('clcik', event =>){
-    afficher()
+function toggle(){
+    if (etat=="masqué"){
+      afficher();
+    }
+    else{
+      cacher();
+    }
 }
 
 
+
+conditions.addEventListener('click', function() {
+
+toggle();
+ }, false);
+
+
+// Checkbox
+
+let checkbox = document.getElementById("checkbox_input");
+let bouton = document.getElementById("input_envoyer");
+bouton.style.pointerEvents = "none";
+
+
+checkbox.addEventListener('change', function() {
+  if (this.checked) {
+    bouton.style.pointerEvents = "auto";
+  } else {
+    bouton.style.pointerEvents = "none";
+  }
+});
