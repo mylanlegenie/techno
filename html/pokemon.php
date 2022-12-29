@@ -30,7 +30,7 @@ return ["nom" => $pokemonData->name, "pv" => $pokemonData->stats[5]->base_stat, 
 }
 
 
-$pokemon = getPokemon('bulbasaur');
+$pokemon = getPokemon('78');
 ?>
 
 
