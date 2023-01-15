@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/pagejs.css">
+    <link rel="stylesheet" href="css/pagephp.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,20 +21,20 @@
    
     <br>
     <div id="div_form">
-        <form action="" id="myform">
+        <form action="inscription.php" id="myform" method="post">
             <div>
                 <label id="label_prenom" for="">Prénom</label>
-                <input id="input_prenom" placeholder="Entrez votre prénom" type="text">
+                <input id="input_prenom" name="prenom" placeholder="Entrez votre prénom" type="text">
             </div>
            
             <div>
                 <label id="label_nom" for="" >Nom</label>
-                <input id="input_nom" placeholder="Entrez votre nom" type="text">
+                <input id="input_nom" placeholder="Entrez votre nom" type="text" name="nom">
             </div>
 
             <div>
                 <label id="label_mail" for="">Adresse E-Mail</label>
-                <input id="input_mail" placeholder="Entrez votre adresse e-mail" type="email">
+                <input id="input_mail" placeholder="Entrez votre adresse e-mail" type="email" name="email">
             </div>
         
             <div>
@@ -58,16 +58,17 @@
             </div>
             <div id="date">
                 <label for="">Date de Naissance</label>
-                <input id="input_date" type="date">
+                <input id="input_date" type="date" name="email">
             </div>
             <div id="checkbox">
                 <input type="checkbox" name="checkbox" id="checkbox_input">
                 <label for="checkbox">J'accepte les conditions</label>
             </div>
-            <input id="input_envoyer" type="submit" value="Envoyer"> 
+            <input id="input_envoyer" type="submit" value="Envoyer" name="button"> 
         </form>
     </div> 
-
+    
+        
     <div id="footer1" style="border-top:1px solid black; height:150px;">
         <?php  include "html/footer.html"?>
     </div>

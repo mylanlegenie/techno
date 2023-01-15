@@ -1,0 +1,26 @@
+<p id="pokemons"></p>
+
+
+<script>
+
+const results = [];
+let end = 899;
+
+for(let num = 1; num < end; num++) {
+  const apiUrl = 'https://pokeapi.co/api/v2/pokemon/' + num;
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(pokemonData => {
+      results.push(pokemonData.name);
+
+      // Si c'est le dernier Pokémon de la boucle, enregistrez les résultats dans un fichier JSON
+      if(num === end -1) {
+        let p = document.getElementById('pokemons');
+        p.innerHTML = (JSON.stringify(results));
+      }
+    });
+}
+
+</script>
+
+  
