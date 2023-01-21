@@ -2,6 +2,7 @@
 
 
 <script>
+let colors = {"electric" : "#ffd324", "grass" : "#96cf4e", "fire" : "#f05320", "normal" : "#D0D1D6","bug" : "#96c94e", "water" : "#05a6de", "psychic" : "#793D96","poison" : "#793D96", "ghost" : "#793D96", "ground" : "#d67e2c", "fighting" : "#d67e2c", "dark" : "#505050", "steel" : "#B6BEC1", "dragon" : "#505050"};
 
 const results = [];
 let end = 899;
@@ -11,7 +12,12 @@ for(let num = 1; num < end; num++) {
   fetch(apiUrl)
     .then(response => response.json())
     .then(pokemonData => {
-      results.push(pokemonData.name);
+      let mypoke = {
+        "name" : pokemonData.name,
+        "image" : pokemonData.sprites.front_default,
+        "color" : colors[pokemonData.types[0].type.name]
+      }
+      results.push(mypoke);
 
       // Si c'est le dernier Pokémon de la boucle, enregistrez les résultats dans un fichier JSON
       if(num === end -1) {

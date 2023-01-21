@@ -11,88 +11,10 @@
 <body>
     <?php include "html/nav.html" ?>
     <h1 id="h1" >PÉTITION POUR QUE L'ALGÉRIE REJOUE SON MATCH CONTRE LE CAMEROUN</h1>
-        <div id="petition" class="fade-in" style="display:flex;align-items-center;justify-content:center;margin-right:35px;">
-            <span>P</span>
-            <span>É</span>
-            <span>T</span>
-            <span>I</span>
-            <span>T</span>
-            <span>I</span>
-            <span>O</span>
-            <span>N</span>
+    <div id="rectbox">
+        <div id="rectangle">
         </div>
-        <div id="pourque" class="fade-in" style="display:flex;align-items-center;justify-content:center;">
-            <div style="margin-right:9px;">
-                <span>P</span>
-                <span>O</span>
-                <span>U</span>
-                <span>R</span>
-            </div>
-            <div>
-                <span>Q</span>
-                <span>U</span>
-                <span>E</span>
-            </div>
-        </div>
-        <div id="lalgerie" class="fade-in" style="display:flex;align-items-center;justify-content:center;">
-            <div>
-                <span>L</span>
-                <span>'</span>
-            </div>
-            <div style="margin-left:4px;">
-                <span>A</span>
-                <span>L</span>
-                <span>G</span>
-                <span>É</span>
-                <span>R</span>
-                <span>I</span>
-                <span>E</span>
-            </div>
-        </div>
-        <div id="rejoueson" class="fade-in" style="display:flex;align-items-center;justify-content:center;margin-left:20px;">
-            <div>
-                <span>R</span>
-                <span>E</span>
-                <span>J</span>
-                <span>O</span>
-                <span>U</span>
-                <span>E</span>
-            </div>
-            <div style="margin-left:10px;">
-                <span>S</span>
-                <span>O</span>
-                <span>N</span>
-            </div>
-        </div>
-        <div id="match" class="fade-in" style="display:flex;align-items-center;justify-content:center;margin-right:50px;">
-            <span>M</span>
-            <span>A</span>
-            <span>T</span>
-            <span>C</span>
-            <span>H</span>
-        </div>
-        <!-- <div>
-            <span>C</span>
-            <span>O</span>
-            <span>N</span>
-            <span>T</span>
-            <span>R</span>
-            <span>E</span>
-        </div>
-        <div>
-            <span>L</span>
-            <span>E</span>
-        </div>
-        <div>
-            <span>C</span>
-            <span>A</span>
-            <span>M</span>
-            <span>E</span>
-            <span>R</span>
-            <span>O</span>
-            <span>U</span>
-            <span>N</span>
-        </div> -->
+    </div>
     <h2 id="h2">Les conditions pour que cette pétition se retrouve entre les mains de la FIFA :</h2>
     <div id="div_li"> 
         <li id="cond1">Minimum 150 000 signatures.</li>

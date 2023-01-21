@@ -157,54 +157,31 @@ label{
     padding: 14px 10px;
 }
 
+#rectbox{
+    height: 50px;
+    width: 100%;
+    position: relative;
+    bottom: 70px;
+    margin-bottom: -70px;
+    display: flex;
+    justify-content: flex-end;
+}
 
-#petition .fade-in span:nth-child(1){
-     animation-delay: 300ms; 
-}
-#petition .fade-in span:nth-child(2){
-     animation-delay: 400ms; 
-}
-#petition .fade-in span:nth-child(3){
-    animation-delay: 500ms; 
-}
-#petition .fade-in span:nth-child(4){
-     animation-delay: 600ms; 
-}
-#petition .fade-in span:nth-child(5){ 
-    animation-delay: 700ms; 
-}
-#petition .fade-in span:nth-child(6){
-    animation-delay: 800ms; 
-}
-#petition .fade-in span:nth-child(7){
-     animation-delay: 900ms; 
-}
-#petition .fade-in span:nth-child(8){ 
-    animation-delay: 1000ms; 
+#rectangle{
+    background-color: #1F1F30;
+    height: 50px;
+    width: 0%;
+    animation: opening 10s; 
+    box-shadow: -40px 0px 20px 0px #1F1F30;
 }
 
 
-#pourque .fade-in span:nth-child(1){ 
-    animation-delay: 900ms; 
-}
-#pourque .fade-in span:nth-child(2){ 
-    animation-delay: 1000ms; 
-}
-#pourque .fade-in span:nth-child(3){ 
-    animation-delay: 1100ms; 
-}
-#pourque .fade-in span:nth-child(4){ 
-    animation-delay: 1200ms; 
-}
-#pourque .fade-in span:nth-child(5){ 
-    animation-delay: 1300ms; 
-}
-#pourque .fade-in span:nth-child(6){ 
-    animation-delay: 1400ms; 
-}
-#pourque .fade-in span:nth-child(7){ 
-    animation-delay: 1500ms; 
-}
-
-
-
+@keyframes opening {
+    from {
+      width: 100%;
+    }
+  
+    to {
+      width: 0%;
+    }
+  }

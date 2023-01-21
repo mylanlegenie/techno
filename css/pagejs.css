@@ -181,3 +181,36 @@ label{
     margin: 0px;
 }
 
+#h1{
+    height: 50px;
+}
+
+
+#rectbox{
+    height: 50px;
+    width: 100%;
+    position: relative;
+    bottom: 70px;
+    margin-bottom: -70px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#rectangle{
+    background-color: #1F1F30;
+    height: 50px;
+    width: 0%;
+    animation: opening 10s; 
+    box-shadow: -40px 0px 20px 0px #1F1F30;
+}
+
+
+@keyframes opening {
+    from {
+      width: 100%;
+    }
+  
+    to {
+      width: 0%;
+    }
+  }

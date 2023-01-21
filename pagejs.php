@@ -10,7 +10,16 @@
 </head>
 <body>
     <?php include "html/nav.html" ?>
-    <h1 id="h1" >PÉTITIONS POUR QUE L'ALGÉRIE REJOUE SON MATCH CONTRE LE CAMEROUN</h1>
+    <h1 id="h1">PÉTITIONS POUR QUE L'ALGÉRIE REJOUE SON MATCH CONTRE LE CAMEROUN</h1>
+
+    <div id="rectbox">
+        <div id="rectangle">
+
+        </div>
+    </div>
+
+
+
     <h2 id="h2" class="conditions">Voir les conditions pour que cette pétition se retrouve entre les mains de la FIFA</h2>
     <div id="div_li" style="display:none;"> 
         <li id="cond1">Minimum 150 000 signatures.</li>

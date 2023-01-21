@@ -68,7 +68,7 @@ $color = $colors[$pokemon["type"]];
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/pokemon.css">
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,9 +77,12 @@ $color = $colors[$pokemon["type"]];
 </head>
 <body>
 
+<img src="<?php echo $pokemon['image'];?>" alt="Cursor" class="cursor" />
+<img src="<?php echo $pokemon['image'];?>" alt="Cursor" class="maincursor" />
+
     <div id="boxbox">
         <div id="box">
-            <form action="pokemon.php" id="form_pokemon">
+            <form action="index.php" id="form_pokemon">
                 <input type="text" id="recherche" placeholder="Entrez le nom d'un pokémon" name="pokemon" autocomplete="off" />
                 <button><i class="fa-solid fa-magnifying-glass"></i></button>
                 
@@ -203,25 +206,47 @@ $color = $colors[$pokemon["type"]];
     </div>
 
 
+
+    <style>
+      .cursor, .maincursor {
+        background-color: <?php echo $color; ?>;
+        border-radius: 50px;
+        border:none;
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        left: -100px;
+        cursor: none;
+        pointer-events: none;
+        z-index: 99999999;
+        }
+
+    *{
+        cursor: none;
+    }
+
+    </style>
        
    
 </body>
 </html>
 
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 <script>
 
 async function getSortedData() {
   try {
-    const response = await fetch('pokemon_names.json');
+    const response = await fetch('all_infos.json');
     const data = await response.json();
-    return data.sort((a, b) => a.localeCompare(b));
+    return data.sort((a, b) => (a.name).localeCompare(b.name));
   } catch(error) {
     console.error(error);
   }
 }
 
+
 function Search(array_, beginning) {
-  return array_.filter(name => name.startsWith(beginning));
+  return array_.filter(pokemon => pokemon.name.startsWith(beginning));
 }
 
 
@@ -230,6 +255,9 @@ function Search(array_, beginning) {
 
 
 <script>
+
+
+
 
 let recherche = document.getElementById("recherche");
 recherche.addEventListener('input', function (evt) {
@@ -245,7 +273,9 @@ getSortedData().then(data => {
 
     suggestion.innerHTML = "";
   
-    cinqpoke.forEach(pokemonname => {
+    cinqpoke.forEach(pokemon => {
+
+        let pokemonname = pokemon.name
 
         let button = document.createElement("button");
         let p = document.createElement('p'); 
@@ -254,6 +284,22 @@ getSortedData().then(data => {
         button.addEventListener("click", function() {
             select(pokemonname);
         });
+
+   
+        
+                    
+
+        $(button).on("mouseover", function () {
+
+            $('.maincursor').hide();
+
+
+            $('.cursor').css("background-color", pokemon.color);
+            $('.cursor').attr("src", pokemon.image);
+
+
+
+        })
         suggestion.appendChild(button);
     });
 
@@ -261,11 +307,50 @@ getSortedData().then(data => {
 
 });
 
+document.addEventListener("click", (evt) => {
+        let targetEl = evt.target; // clicked element      
+    
+        suggestion.innerHTML = "";
+      });
+
 
 function select(name) {
-    window.location.href = "pokemon.php?pokemon=" + name;
+    window.location.href = "index.php?pokemon=" + name;
 }
 
 
 
+$(function () {
+  $("body").mousemove(function (e) {
+    $(".cursor").css({
+      "left": e.clientX - 10,
+      "top": e.clientY - 10
+    });
+    $(".maincursor").css({
+      "left": e.clientX - 10,
+      "top": e.clientY - 10
+    });
+  }).mouseout(function () {
+    $(".cursor").hide();
+  });
+});
+
+
+
+$(function () {
+            $('#suggestion').mousemove(function (e) {
+                $('.maincursor').hide();
+
+                $('.cursor').show();
+
+            }).mouseout(function () {
+                $(".cursor").hide();
+                $('.maincursor').show();
+            });
+            });
+                    
+
+
 </script>
+
+
