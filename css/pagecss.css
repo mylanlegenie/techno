@@ -185,3 +185,22 @@ label{
       width: 0%;
     }
   }
+
+
+input[type="radio"]{
+    display: none;
+}
+input[type="radio"] + label {
+    cursor: pointer;
+  }
+input[type="radio"]:checked + label{
+    background-image: url("/img/male.png");
+    background-size: cover;
+    background-size: 10px;
+    background-repeat: none;
+}
+
+#label-name:focus{
+    
+}
+

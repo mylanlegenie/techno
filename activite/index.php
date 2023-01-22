@@ -32,12 +32,7 @@
         </form>
     <div id="div-creer">
         <a href="creer1compte.php">Créer un compte</a>
-    </div>
-
-    <div>
-        <footer>@ALGERSTAGRAM 2023</footer>
-    </div>
-    
+    </div> 
     </div>
 </body>
 </html>

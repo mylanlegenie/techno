@@ -28,35 +28,34 @@
         <form action="" id="myform">
             <div>
                 <label id="label_prenom" for="">Prénom</label>
-                <input id="input_prenom" placeholder="Entrez votre prénom" type="text">
+                <input id="input_prenom" placeholder="Entrez votre prénom" type="text" autocomplete="off">
             </div>
            
             <div>
                 <label id="label_nom" for="" >Nom</label>
-                <input id="input_nom" placeholder="Entrez votre nom" type="text">
+                <input id="input_nom" placeholder="Entrez votre nom" type="text" autocomplete="off">
             </div>
 
             <div>
                 <label id="label_mail" for="">Adresse E-Mail</label>
-                <input id="input_mail" placeholder="Entrez votre adresse e-mail" type="email">
+                <input id="input_mail" placeholder="Entrez votre adresse e-mail" type="email" autocomplete="off">
             </div>
-        
             <div>
-                <label id="label_sexe" for="">Sexe</label>
-                <div id="sexe">
+            <label id="label_sexe" for="">Sexe</label>
+            <div id="sexe">
                     <div>
-                        <input placeholder="" type="radio" name="sexe" value="male">
-                        <label for="">Mâle</label>
+                        <input id="male" type="radio" name="sexe" value="male">
+                        <label id="label-male" for="male">Mâle</label>
                     </div>
 
                     <div>
-                        <input placeholder="" type="radio" name="sexe" value="femelle">
-                        <label for="">Femelle</label>
+                        <input id="femelle" type="radio" name="sexe" value="femelle" >
+                        <label for="femelle">Femelle</label>
                     </div>
 
                     <div>
-                        <input placeholder="" type="radio" name="sexe" value="autre">
-                        <label for="">Autre</label>
+                        <input id="autre" type="radio" name="sexe" value="autre">
+                        <label for="autre">Autre</label>
                     </div>   
             </div>
             </div>

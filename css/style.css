@@ -34,7 +34,7 @@ p{
 .anim{
     position: relative;
     -webkit-box-reflect: below -60px linear-gradient(transparent, black);
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
