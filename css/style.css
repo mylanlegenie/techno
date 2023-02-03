@@ -63,3 +63,55 @@ p{
         transform:translatey(0px);
     }
 }
+
+/* PROGRAMMATION*/
+
+#programme{
+    animation: turntwo 0.8s ease-in-out;
+}
+
+
+@keyframes turntwo{
+    from {
+        transform:rotateX(0deg)
+
+    }
+    to {
+        transform:rotateX(360deg)
+    }
+}
+
+/* Nom*/
+
+
+#nom{
+    display: flex;
+    text-decoration:overline;
+}
+
+
+
+#nom > div{
+    display: flex;
+    margin-left: 1%;
+}
+
+#nom > div > h4{
+    animation: nom 1.5s ease-in-out;
+    animation-delay: calc(0.1s * var(--i));
+
+}
+
+
+@keyframes nom{
+    0%{
+        transform:translateY(0px);
+    }
+    20%{
+        transform:translateY(-30px);
+    }
+    40%,100%{
+        transform:translatey(0px);
+    }
+}
+

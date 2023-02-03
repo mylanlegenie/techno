@@ -187,20 +187,6 @@ label{
   }
 
 
-input[type="radio"]{
-    display: none;
+#divmale{
+    width: 100%;
 }
-input[type="radio"] + label {
-    cursor: pointer;
-  }
-input[type="radio"]:checked + label{
-    background-image: url("/img/male.png");
-    background-size: cover;
-    background-size: 10px;
-    background-repeat: none;
-}
-
-#label-name:focus{
-    
-}
-

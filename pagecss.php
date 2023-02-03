@@ -43,11 +43,10 @@
             <div>
             <label id="label_sexe" for="">Sexe</label>
             <div id="sexe">
-                    <div>
+                    <div id="divmale">
                         <input id="male" type="radio" name="sexe" value="male">
-                        <label id="label-male" for="male">Mâle</label>
+                        <label for="male">Mâle</label>
                     </div>
-
                     <div>
                         <input id="femelle" type="radio" name="sexe" value="femelle" >
                         <label for="femelle">Femelle</label>

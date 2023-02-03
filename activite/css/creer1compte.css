@@ -8,16 +8,23 @@ body{
 }
 
 #tout{
-     display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-input{
-    outline:none;
+#date{
+    padding: 5%;
+    border-radius: 12px;
+    border: 1px solid white;
+    width: 100%;
+    background:none;
+    color: white;
+    margin-bottom:5%;
 }
+
 
 #myform{
     display: flex;
@@ -30,9 +37,11 @@ input{
     padding: 1px;
     margin-left: 34% ;
     margin-right: 34% ;
-    height: auto;
-    margin-bottom: 3%;
-    width: 40vw;
+    height: 70vh;
+    margin-bottom: 2%;
+    width: 25vw;
+    border-radius: 20px;
+
 }
 
 #myform div:not(#envoyer){
@@ -42,8 +51,13 @@ input{
     align-items: center;
     padding: 0% 5%;
     height: 12%;
-    width: 50%;
-    margin-top: 4%;
+    width: 70%;
+    margin-top: 10%;
+    
+}
+
+input{
+    outline:none;
 }
 
 #myform div input:not(#submit,#date){
@@ -54,56 +68,48 @@ input{
     margin-top: 5%;
     margin-bottom: 5%;
     color: white;
+    border: 1px solid white;
+    border-radius: 12px;
 }
+
 #envoyer{
-    width: 100%;
+    width: 60%;
     height: 20%;
+    border-radius: 14px;
+    margin-top: 5%;
 }
 
 #submit{
     margin-bottom: 10%;
-    margin-top: 10%;
+    margin-top: 4%;
     border: 3px solid white;
-    width: 50%;
+    width: 100%;
+    border-radius: 9px;
 }
 
 label{
     color: white;
 }
 
-footer{
-    text-align: center;
-    color: white;
-    margin-top:15%;
-}
-
 #div-login a{
     text-decoration: none;
     color: rgb(43, 124, 255);
     font-size: 20px;
-    border: 1px solid white;
     padding: 30px;
-    width: 40vw;
+    width: 25vw;
+    height: auto;
 }
 
 #div-login{
     text-align: center;
     height: 20%;
-    margin:0px;
+    border: 1px solid white;
     margin-right: 0%;
     margin-left: 0%; 
     display: flex;
     align-items: center;
     justify-content: center;
-
+    border-radius: 20px;
 }
 
-#date{
-    padding: 10px;
-    padding: 5% 5%;
-    width: 100%;
-    background:none;
-    border: 1px solid white;
-    margin-top: 3%;
-    color: white;
-}
+

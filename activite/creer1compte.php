@@ -45,11 +45,8 @@
         </form>
 
         <div id="div-login">
-            <a href="index.php">Se connecter</a>
+            <a href="/activite/">Se connecter</a>
         </div>
-
-        <footer>@ALGERSTAGRAM 2023</footer>
-
     </div>
 </body>
 </html>

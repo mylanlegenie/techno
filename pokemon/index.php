@@ -142,7 +142,7 @@ $color = $colors[$pokemon["type"]];
 
                
             </div>
-            <div id="cadre">
+            <div id="cadre" style="background-image:url(img/background/foret2.png);">
                 <img id="img_pokemon"src="<?php echo($pokemon["image"]); ?>" alt="" style="max-height: 250px;height:auto;width: auto;">
                 <p id="specs">N°<?php echo($pokemon["id"]); ?>  Length : <?php echo($pokemon["taille"]/10); ?>m  Weight : <?php echo($pokemon["poids"]/10); ?>kg</p>
             </div>

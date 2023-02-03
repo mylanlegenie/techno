@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/pagejs.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="website icon" type="png" href="img/logo2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <?php include "html/nav.html" ?>
@@ -49,19 +51,29 @@
             <div>
                 <label id="label_sexe" for="">Sexe</label>
                 <div id="sexe">
-                    <div>
+                    <div id="divmale">
                         <input id="male" type="radio" name="sexe" value="male">
-                        <label for="">Mâle</label>
+                        <label id="labelmale" for="male">
+                            <p>Mâle</p>
+                            <i class="fa-solid fa-mars"></i>
+                        </label>
+                        
                     </div>
 
                     <div>
                         <input id="femelle" type="radio" name="sexe" value="femelle">
-                        <label for="">Femelle</label>
+                        <label for="">
+                            <p>Femelle</p>
+                            <i class="fa-solid fa-venus"></i>
+                        </label>
                     </div>
 
                     <div>
                         <input id="autre" type="radio" name="sexe" value="autre">
-                        <label for="">Autre</label>
+                        <label for="">
+                            <p>Autre</p>
+                            <i class="fa-solid fa-person"></i>
+                        </label>
                     </div>   
             </div>
             </div>

@@ -43,3 +43,47 @@ checkbox.addEventListener('change', function() {
     bouton.style.pointerEvents = "none";
   }
 });
+
+
+
+// Radio
+
+
+
+
+
+function toggle(toDisplay, toHide){
+    toDisplay.style.display ='block';
+    toHide.style.display ="none";
+}
+
+
+
+
+
+
+let allSexe = document.getElementsByName('sexe');
+
+allSexe.forEach(radio => {
+  
+  radio.addEventListener('change',function(){
+
+    allSexe.forEach(radio2 => {
+      let parent = radio2.parentNode;
+      let p = parent.querySelector("label p");
+      let i = parent.querySelector("label i");
+
+      if (radio2.checked){
+        toggle(i, p);
+      }
+      else{
+        toggle(p, i);
+      }
+
+      
+    });
+
+  })
+
+
+});
