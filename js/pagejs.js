@@ -21,8 +21,6 @@ function toggle(){
     }
 }
 
-
-
 conditions.addEventListener('click', function() {
 
 toggle();
@@ -56,10 +54,6 @@ function toggle(toDisplay, toHide){
     toDisplay.style.display ='block';
     toHide.style.display ="none";
 }
-
-
-
-
 
 
 let allSexe = document.getElementsByName('sexe');

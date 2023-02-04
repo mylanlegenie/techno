@@ -321,4 +321,16 @@ body{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+#img_pokemon{   
+    max-width: 70%;
+    max-height: 100px;
+    width: auto;
+    height: auto;
 }

@@ -20,8 +20,6 @@
         </div>
     </div>
 
-
-
     <h2 id="h2" class="conditions">Voir les conditions pour que cette pétition se retrouve entre les mains de la FIFA</h2>
     <div id="div_li" style="display:none;"> 
         <li id="cond1">Minimum 150 000 signatures.</li>
@@ -45,11 +43,11 @@
 
             <div>
                 <label id="label_mail" for="">Adresse E-Mail</label>
-                <input id="input_mail" placeholder="Entrez votre adresse e-mail" type="email">
+                <input id="input_mail" style="margin-bottom:0%;" placeholder="Entrez votre adresse e-mail" type="email">
             </div>
         
             <div>
-                <label id="label_sexe" for="">Sexe</label>
+                <label id="label_sexe" style="margin-bottom:5%;" for="">Sexe</label>
                 <div id="sexe">
                     <div id="divmale">
                         <input id="male" type="radio" name="sexe" value="male">

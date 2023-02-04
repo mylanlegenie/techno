@@ -23,7 +23,7 @@
         <li id="cond4">Baricader tous les magasins de Paris en cas de victoire de l'Algérie.</li>
     </div>
    
-    <br>
+
     <div id="div_form">
         <form action="" id="myform">
             <div>
@@ -41,7 +41,7 @@
                 <input id="input_mail" placeholder="Entrez votre adresse e-mail" type="email" autocomplete="off">
             </div>
             <div>
-            <label id="label_sexe" for="">Sexe</label>
+            <label id="label_sexe"for="">Sexe</label>
             <div id="sexe">
                     <div id="divmale">
                         <input id="male" type="radio" name="sexe" value="male">

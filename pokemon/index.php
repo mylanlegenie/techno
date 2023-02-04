@@ -53,13 +53,42 @@ else{
 
 $pokemon = getPokemon($my_pokemon);
 
-$colors = ["electric" => "#ffd324", "grass" => "#96cf4e", "fire" => "#f05320", "normal" => "#D0D1D6","bug" => "#96c94e", "water" => "#05a6de", "psychic" => "#793D96","poison" => "#793D96", "ghost" => "#793D96", "ground" => "#d67e2c", "fighting" => "#d67e2c", "dark" => "#505050", "steel" => "#B6BEC1", "dragon" => "#505050","rock" => "#d67e2c"
+$colors = ["electric" => "#ffd324", "grass" => "#96cf4e", "fire" => "#f05320", "normal" => "#D0D1D6","bug" => "#96c94e", "water" => "#05a6de", "psychic" => "#793D96","poison" => "#793D96", "ghost" => "#793D96", "ground" => "#d67e2c", "fighting" => "#d67e2c", "dark" => "#505050", "steel" => "#B6BEC1", "dragon" => "#505050","rock" => "#d67e2c", "fairy" => "#b0386d"
 
 ];
  
-
-
 $color = $colors[$pokemon["type"]];
+
+$id = $pokemon['id'];
+
+$path = "img/svg/" . $id . ".svg";
+
+if (file_exists($path)){
+   $image = $path;
+}
+else{
+    $image = $pokemon['image'];
+}
+
+
+function getRandomImage($folder)
+{
+    $files = preg_grep('~\.(jpeg|jpg|png|gif)$~', scandir($folder));
+    return $files[array_rand($files)];
+    
+}
+
+$path = "img/background/";
+
+$bg = getRandomImage($path . $pokemon['type']);
+
+if (is_null($bg)){
+    $bg_url = $path . "default/" . getRandomImage($path . "default");
+}
+else{
+    $bg_url = $path . $pokemon['type'] . "/" . $bg;
+}
+
 ?>
 
 
@@ -142,8 +171,9 @@ $color = $colors[$pokemon["type"]];
 
                
             </div>
-            <div id="cadre" style="background-image:url(img/background/foret2.png);">
-                <img id="img_pokemon"src="<?php echo($pokemon["image"]); ?>" alt="" style="max-height: 250px;height:auto;width: auto;">
+            <div id="cadre" style="background-image:url(<?php echo $bg_url;?>);">
+                <p> </p>
+                <img id="img_pokemon"src="<?php echo($image); ?>" alt="">
                 <p id="specs">N°<?php echo($pokemon["id"]); ?>  Length : <?php echo($pokemon["taille"]/10); ?>m  Weight : <?php echo($pokemon["poids"]/10); ?>kg</p>
             </div>
             <div id="atk">

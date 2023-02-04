@@ -3,6 +3,7 @@ body{
     margin-right: 0px;
     margin-top: -24px;
     background-color: rgba(22, 22, 40, 0.96);
+    width: 100vw;
 }
 
 h3{
@@ -13,6 +14,7 @@ h3{
 
 #footer_{
     color:white;
+    width: 100vw;
     margin-top: 250px;
 }
 
@@ -29,6 +31,14 @@ p{
     text-align: center;
     font-size: 18px;
     font-family: consolas;
+}
+
+#div_diapo1{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .anim{
@@ -86,7 +96,8 @@ p{
 
 #nom{
     display: flex;
-    text-decoration:overline;
+    animation : overlay_hide 5.3s ease-in-out;
+    text-align: center;
 }
 
 
@@ -103,15 +114,27 @@ p{
 }
 
 
+ 
+
 @keyframes nom{
     0%{
         transform:translateY(0px);
     }
     20%{
-        transform:translateY(-30px);
+        transform:translateY(-20px);
     }
     40%,100%{
         transform:translatey(0px);
     }
 }
 
+
+@keyframes overlay_hide {
+    0%,80%{
+        text-decoration: overline 1px rgba(255, 255, 255, 255);
+    }
+    100%{
+        text-decoration: overline 1px rgba(255, 255, 255, 0);
+    }
+
+}

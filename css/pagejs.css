@@ -182,10 +182,10 @@ input[type="radio"]{
 
 
 #rectbox{
-    height: 50px;
+    height: 60px;
     width: 100%;
     position: relative;
-    bottom: 70px;
+    bottom: 80px;
     margin-bottom: -70px;
     display: flex;
     justify-content: flex-end;
@@ -193,7 +193,7 @@ input[type="radio"]{
 
 #rectangle{
     background-color: #1F1F30;
-    height: 50px;
+
     width: 0%;
     animation: opening 10s; 
     box-shadow: -40px 0px 20px 0px #1F1F30;
@@ -217,7 +217,7 @@ input[type="radio"]{
   }
   #sexe > div > label{
     margin-left: 4px;
-    height: 40px;
+    height: 20px;
     width: 50px;
 
     display: flex;
