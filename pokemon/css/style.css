@@ -3,8 +3,17 @@
     src: url(../font/blaster.ttf);
 }
   
+:root{
+    --color1:red;
+    --color2:blue;
+    --color3:yellow;
+
+}
+
+
+
 body{
-    background: linear-gradient(-45deg, #0A8703,#218A97,#130561);
+    background: linear-gradient(-45deg, var(--color1),var(--color2),var(--color3));
     height: 100vh;
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
@@ -332,5 +341,5 @@ body{
     max-width: 70%;
     max-height: 100px;
     width: auto;
-    height: auto;
+    height: autof;
 }

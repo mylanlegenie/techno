@@ -53,7 +53,7 @@ else{
 
 $pokemon = getPokemon($my_pokemon);
 
-$colors = ["electric" => "#ffd324", "grass" => "#96cf4e", "fire" => "#f05320", "normal" => "#D0D1D6","bug" => "#96c94e", "water" => "#05a6de", "psychic" => "#793D96","poison" => "#793D96", "ghost" => "#793D96", "ground" => "#d67e2c", "fighting" => "#d67e2c", "dark" => "#505050", "steel" => "#B6BEC1", "dragon" => "#505050","rock" => "#d67e2c", "fairy" => "#b0386d"
+$colors = ["electric" => "#ffd324", "grass" => "#96cf4e", "fire" => "#f05320", "normal" => "#D0D1D6","bug" => "#96c94e", "water" => "#05a6de", "psychic" => "#793D96","poison" => "#793D96", "ghost" => "#793D96", "ground" => "#d67e2c", "fighting" => "#d67e2c", "dark" => "#505050", "steel" => "#B6BEC1", "dragon" => "#e0b63b","rock" => "#d67e2c", "fairy" => "#b0386d"
 
 ];
  
@@ -104,7 +104,7 @@ else{
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Pokémon</title>
 </head>
-<body>
+<body id="body">
 
 <img src="<?php echo $pokemon['image'];?>" alt="Cursor" class="cursor" />
 <img src="<?php echo $pokemon['image'];?>" alt="Cursor" class="maincursor" />
@@ -378,9 +378,15 @@ $(function () {
                 $('.maincursor').show();
             });
             });
-                    
 
+
+
+                
 
 </script>
+<script src="bg.js"></script>
 
 
+<script>
+    setNewBg("<?php echo $color?>");
+</script>

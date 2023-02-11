@@ -53,9 +53,9 @@ else{
 
 $pokemon = getPokemon($my_pokemon);
 
-$colors = ["electric" => "#ffd324", "grass" => "#96cf4e", "fire" => "#f05320", "normal" => "#D0D1D6","bug" => "#96c94e", "water" => "#05a6de", "psychic" => "#793D96","poison" => "#793D96", "ghost" => "#793D96", "ground" => "#d67e2c", "fighting" => "#d67e2c", "dark" => "#505050", "steel" => "#B6BEC1", "dragon" => "#505050"
+$colors = ["electric" => "#ffd324", "grass" => "#96cf4e", "fire" => "#f05320", "normal" => "#D0D1D6","bug" => "#96c94e", "water" => "#05a6de", "psychic" => "#793D96","poison" => "#793D96", "ghost" => "#793D96", "ground" => "#d67e2c", "fighting" => "#d67e2c", "dark" => "#505050", "steel" => "#B6BEC1", "dragon" => "#e0b63b"];
 
-];
+echo $pokemon["type"];
  
 
 

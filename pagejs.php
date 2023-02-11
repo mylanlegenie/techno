@@ -51,7 +51,7 @@
                 <div id="sexe">
                     <div id="divmale">
                         <input id="male" type="radio" name="sexe" value="male">
-                        <label id="labelmale" for="male">
+                        <label id="labelmale" for="male" style="cursor:pointer;">
                             <p>Mâle</p>
                             <i class="fa-solid fa-mars"></i>
                         </label>
@@ -59,8 +59,8 @@
                     </div>
 
                     <div>
-                        <input id="femelle" type="radio" name="sexe" value="femelle">
-                        <label for="">
+                        <input id="femelle" type="radio" name="sexe" value="femelle" >
+                        <label for="femelle"  style="cursor:pointer;">
                             <p>Femelle</p>
                             <i class="fa-solid fa-venus"></i>
                         </label>
@@ -68,7 +68,7 @@
 
                     <div>
                         <input id="autre" type="radio" name="sexe" value="autre">
-                        <label for="">
+                        <label for="autre"  style="cursor:pointer;">
                             <p>Autre</p>
                             <i class="fa-solid fa-person"></i>
                         </label>

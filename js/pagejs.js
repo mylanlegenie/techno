@@ -3,6 +3,7 @@ let conditions = document.getElementsByClassName('conditions')[0];
 
 
 
+
 function afficher() {
     etat = "affiché";
   document.getElementById('div_li').style.display = 'flex';
@@ -50,7 +51,7 @@ checkbox.addEventListener('change', function() {
 
 
 
-function toggle(toDisplay, toHide){
+function toggleRadio(toDisplay, toHide){
     toDisplay.style.display ='block';
     toHide.style.display ="none";
 }
@@ -68,10 +69,10 @@ allSexe.forEach(radio => {
       let i = parent.querySelector("label i");
 
       if (radio2.checked){
-        toggle(i, p);
+        toggleRadio(i, p);
       }
       else{
-        toggle(p, i);
+        toggleRadio(p, i);
       }
 
       
