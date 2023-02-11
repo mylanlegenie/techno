@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+  --bleu1: #00A5E0;
+  --bleu2: #18435A;
+  --bleu2sombre :#152f3d;
+  --bleu3: #13293D;
+  --bleu4: #13293D99;
+  --bleu5:#7b9cad;
+  --gris1: #E6E8E6;
+
+}
+
+
+#logo{
+  height: 50px;
+}
+#loupe{
+height: 30px;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 25px
+}
+
+#nav_gauche{
+  display: flex;
+  align-items: center;
+
+
+}
+
+#nav_droite{
+  display: flex;
+  align-items :center;
+
+}
+.navlink, .navlink-mobile{
+  margin-left: 10px;
+  color : var(--bleu3);
+  text-decoration : none;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 17px;
+  padding : 10px;
+}
+.navhover{
+    transition : 1s;
+}
+
+.navhover:hover{
+  color: white;
+  background-color : var(--bleu4);
+
+}
+#se_connecter{
+font-size : 14px;
+text-transform: none;
+transition : 1s;
+}
+#se_connecter:hover{
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+
+#s_inscrire{
+  background-color:var(--bleu2) ;
+  color: white;
+  border-radius : 13px;
+  transition: 1s;
+}
+#s_inscrire:hover{
+  background-color: var(--bleu2sombre);
+
+}
+#burger,#croix{
+  width: 30px;
+
+}
+.burger{
+  display: none;
+}
+#loupe{
+  margin-right: 30px;
+}
+
+#menu_mobile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display : none;
+}
+
+
+.navlink-mobile{
+  font-size: 25px;
+}
+
+#searchbarbureau{
+  display : none;
+  height : 10px;
+  align-items: center;
+  }
+#searchmenu {
+  width: 200px;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+
+.searchbar > input {
+  padding: 0px 10px;
+  border: 1px solid var(--bleu2sombre);
+  border-radius : 6px 0px 0px 6px;
+  font-size: 11px;
+  height: 40px;
+
+}
+
+.searchbar > input:focus{
+  border: 1px solid var(--bleu1);
+  outline: none;
+}
+.searchbar > button{
+  border: none;
+  background-color: #18435ADD;
+  border-radius: 0px 6px 6px 0px;
+  padding: 5px 10px;
+  height: 42px;
+
+
+
+}
+
+
+
+.searchbar > button > img {
+filter: brightness(0) invert(1);
+}
+/* MEDIA QUERIES : propriétés qui s'appliquent aux petits écrans uniquement */
+#searchbarmobile{
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+display: none;
+transition: 1s;
+
+}
+
+
+
+#searchbarmobile > input{
+  width: 70%;
+  font-size: 18px;
+}
+
+@media screen and (max-width : 850px){
+  .navlink{
+    display: none;
+  }
+  .burger{
+    display: block;
+
+  }
+
+
+  #croix{
+    display: none;
+  }
+  nav{
+    justify-content: space-between;
+     }
+     #nav_droite{
+       margin-right: 20px;
+     }
+     #nav_gauche{
+       margin-left: 20px;
+     }
+
+     #searchmenu{
+       width: 70px;
+     }
+}

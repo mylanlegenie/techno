@@ -1,0 +1,46 @@
+
+
+#form-connexion{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 120px;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+#form-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+#connexion-texte{
+  color: var(--bleu3);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 37px;
+}
+
+#form-connexion input, #form-connexion button{
+
+  border: 1px solid var(--bleu2sombre);
+  border-radius: 30px;
+  padding: 5px 15px;
+}
+
+#button{
+  color: white;
+  background-color: var(--bleu2);
+}
+
+
+
+@media screen and (max-width : 850px){
+#form-connexion{
+  width : 80%;
+}
+
+
+}

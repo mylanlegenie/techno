@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+#carrousel{
+  height: 400px;
+  width: 80%;
+  background-image: url('../images/images-diapo/siege.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+#conteneur{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.fleche{
+  height : 50px;
+}
+
+#titre-carrousel{
+  font-size : 52px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+
+@media screen and (max-width : 850px){
+  #carrousel{
+  height : 200px ;
+  margin-top : 20px;
+}
+
+}
