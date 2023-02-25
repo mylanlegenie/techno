@@ -366,6 +366,7 @@ h1 {
 #pokemon_container{
     width: auto;
     transition: 300ms ease-in-out;
+    perspective: 500px;;
 }
 
 #atk, #cadre, #carte-header{
@@ -377,9 +378,6 @@ body {
     overscroll-behavior-y: none;
 }
 
-#pokemon_container:hover{
-    transform: scale3d(1.07,1.07,1.07);
 
-}
 
 

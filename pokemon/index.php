@@ -153,7 +153,7 @@ if (is_null($bg)) {
         </div>
     </div>
 
-    <div style="height: 200px">
+    <div style="height: 200px" id="debug">
 
     </div>
 
@@ -264,11 +264,6 @@ if (is_null($bg)) {
             </div> -->
 
     </div>
-
-    <div style="height:200px">
-
-    </div>
-
 
 
     <style>
@@ -427,41 +422,59 @@ if (is_null($bg)) {
 
 <script>
     setNewBg("<?php echo $color ?>");
+</script>
 
-    // //Retourne la position absolue d'un objet
-    // function findPos(obj) {
-    //     var curleft = curtop = 0;
-    //     if (obj.offsetParent) {
-    //         curleft = obj.offsetLeft
-    //         curtop = obj.offsetTop
-    //         while (obj = obj.offsetParent) {
-    //             curleft += obj.offsetLeft
-    //             curtop += obj.offsetTop
-    //         }
-    //     }
-    //     return [curleft, curtop];
-    // }
+<script>
+    const card = document.getElementById('pokemon_container');
+    const debug = document.getElementById("debug");
+    let bounds;
 
+    function rotateToMouse(e) {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+        const leftX = mouseX - bounds.x;
+        const topY = mouseY - bounds.y;
+        const center = {
+            x: leftX - bounds.width / 2,
+            y: topY - bounds.height / 2
+        }
 
-    // function placeNoise() {
-    //     var noise = document.getElementById("noise");
+        const distance = Math.sqrt(center.x ** 2 + center.y ** 2);
 
-    //     var carte = document.getElementById("carte");
+        let angle = Math.log(distance) * 15;
 
-    //     var pos = findPos(carte);
+        if (center.x <=0){
+            angle = - angle;
+        }
 
-    //     noise.style.left = pos[0];
-    //     noise.style.top = pos[1] -190;
-    // }
-
-    // placeNoise();
-
-    // window.addEventListener('resize', function (event) {
-    //     placeNoise();
-    // }, true);
+        debug.innerHTML = "rotate3d(" + center.x/100 + "," + center.y/100 + ",0," + angle + "deg)";
 
 
+        console.log()
 
+        console.log(center.x);
 
+        card.style.transform = "scale3d(1.07, 1.07, 1.07) rotateY(" + angle + "deg)";
 
+        //         $card.querySelector('.glow').style.backgroundImage = `
+        //     radial-gradient(
+        //       circle at
+        //       ${center.x * 2 + bounds.width / 2}px
+        //       ${center.y * 2 + bounds.height / 2}px,
+        //       #ffffff55,
+        //       #0000000f
+        //     )
+        //   `;
+    }
+
+    card.addEventListener('mouseenter', () => {
+        bounds = card.getBoundingClientRect();
+        document.addEventListener('mousemove', rotateToMouse);
+    });
+
+    card.addEventListener('mouseleave', () => {
+        document.removeEventListener('mousemove', rotateToMouse);
+        card.style.transform = '';
+        card.style.background = '';
+    });
 </script>
