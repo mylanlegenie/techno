@@ -2,45 +2,47 @@
     font-family: Blaster;
     src: url(../font/blaster.ttf);
 }
-  
-:root{
-    --color1:red;
-    --color2:blue;
-    --color3:yellow;
+
+:root {
+    --color1: red;
+    --color2: blue;
+    --color3: yellow;
 
 }
 
 
 
-body{
-    background: linear-gradient(-45deg, var(--color1),var(--color2),var(--color3));
+body {
+    background: linear-gradient(-45deg, var(--color1), var(--color2), var(--color3));
     height: 100vh;
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     font-family: sans-serif;
 }
 
-@keyframes gradient{
-    0%{
+@keyframes gradient {
+    0% {
         background-position: 0% 50%;
     }
 
-    50%{
+    50% {
         background-position: 100% 50%;
     }
 
-    100%{
+    100% {
         background-position: 0% 50%;
     }
 }
-#form_pokemon{
+
+#form_pokemon {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100% ;
+    width: 100%;
     height: 150px;
 }
-#form_pokemon input{
+
+#form_pokemon input {
     width: 100%;
     border-radius: 14px 0 0 0;
     padding: 7px 18px;
@@ -50,7 +52,7 @@ body{
     z-index: 2;
 }
 
-#form_pokemon button{
+#form_pokemon button {
     width: 7%;
     border: none;
     border-left: 1px solid rgba(0, 0, 0, 0.083);
@@ -66,16 +68,9 @@ body{
 
 
 /* CARTE */
-#pokemon_container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-}
 
-#carte{
+
+#carte {
     height: 400px;
     aspect-ratio: 30 / 43;
     /* background: radial-gradient(circle, #9ac652, #7eac0a ); */
@@ -87,13 +82,13 @@ body{
     justify-content: flex-start;
 
     z-index: 2;
-    
+
 
 }
 
 
 
-#carte-header{
+#carte-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -105,29 +100,25 @@ body{
 }
 
 
-#carte-header p, h1{
+#carte-header p,
+h1 {
     margin: 0;
 }
 
 
-#carte-header > div{
+#carte-header>div {
     display: flex;
     align-items: center;
 }
 
-#carte h1{
+#carte h1 {
 
     font-size: 20px;
 }
 
 
-#pokemon_container svg{
-    position: absolute;
-    z-index: 1;
 
-}
-
-#carte-header img{
+#carte-header img {
     height: 20px;
     border: 1px solid white;
     border-radius: 50px;
@@ -135,65 +126,66 @@ body{
     margin-right: 2px;
 }
 
-:root{
+:root {
     --blanc: #f0f0f0;
     --gris: #a5a5a5;
 }
 
-#carte-header > div:first-of-type p{
+#carte-header>div:first-of-type p {
     background: linear-gradient(-180deg, var(--blanc), var(--gris), var(--blanc), var(--blanc), var(--blanc), var(--gris), var(--gris), var(--gris), var(--gris));
     border-radius: 16px;
     padding: 1px 9px;
     font-family: Blaster;
     color: #5d5d5e;
     text-shadow:
-    -1px -1px 0 #fff,
-    1px -1px 0 #fff,
-    -1px 1px 0 #fff,
-    1px 1px 0 #fff; 
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff;
     box-shadow: 1px 1px 2px rgb(45, 45, 45);
     transform: skew(-14deg);
     font-size: 13px;
     position: relative;
     left: -5px;
 }
-#carte-header p > span{
+
+#carte-header p>span {
     font-size: 8px;
-    
+
 }
 
-#carte-header p:last-of-type{
+#carte-header p:last-of-type {
     font-weight: bold;
     font-size: 20px;
 }
 
-#img_pokemon{
-    width: 100% ;
+#img_pokemon {
+    width: 100%;
 
 }
 
-#specs{
+#specs {
     font-size: 6.5px;
     color: #626164;
-    margin:0px;
+    margin: 0px;
     width: 100%;
     text-align: center;
-    background: linear-gradient( 90deg,rgb(185, 185, 185), var(--blanc), var(--blanc), var(--blanc), rgb(185, 185, 185));
+    background: linear-gradient(90deg, rgb(185, 185, 185), var(--blanc), var(--blanc), var(--blanc), rgb(185, 185, 185));
     padding: 1px 0px;
     border-top: 4px ridge rgb(206, 206, 206);
 }
 
-#cadre{
+#cadre {
     display: flex;
-    justify-content: center; 
-    flex-direction: column; 
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
     border: 4px ridge rgb(206, 206, 206);
     width: 93%;
-   
+
 }
 
-#atk{
+#atk {
     margin-top: 40px;
     display: grid;
     grid-template-columns: 3fr 9fr 1fr;
@@ -205,30 +197,30 @@ body{
     height: 100px;
 }
 
-.atk_img{
+.atk_img {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-.atk_img img{
+.atk_img img {
     height: 15px;
     width: 15px;
 }
 
 
-.normal{
+.normal {
     border-radius: 50px;
     border: none;
 }
 
 
-#footer img{
+#footer img {
     height: 13px;
     width: 13px;
 }
 
-#footer{
+#footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -237,31 +229,31 @@ body{
     width: 100%;
 }
 
-#footer div{
+#footer div {
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 
-#footer p{
-    margin : 4px 4px;
+#footer p {
+    margin: 4px 4px;
 }
 
-#footer > div{
-    background-color:white;
+#footer>div {
+    background-color: white;
     border-radius: 10px;
     padding: 0px;
     box-shadow: 1px 1px 2px rgb(45, 45, 45);
 }
 
-#resistance{
+#resistance {
     border-left: 1px solid grey;
     padding-left: 3px;
 }
 
-#description{
-    font-size:  8px;
+#description {
+    font-size: 8px;
     text-align: left;
     color: rgb(78, 76, 76);
     display: flex;
@@ -270,17 +262,17 @@ body{
     align-items: center;
 }
 
-#description div{
+#description div {
     width: 100%;
 }
 
-#recherche:focus{
+#recherche:focus {
     border: none;
     outline: none;
 }
 
 
-#suggestion{
+#suggestion {
 
     width: 200px;
     position: relative;
@@ -293,9 +285,9 @@ body{
 
 
 
-#suggestion button{
-    width : 100%;
-    height : 50px;
+#suggestion button {
+    width: 100%;
+    height: 50px;
     background-color: white;
 
 
@@ -304,11 +296,11 @@ body{
     border: none;
 }
 
-#suggestion button:hover{
+#suggestion button:hover {
     background-color: #DDDDDD;
 }
 
-#box{
+#box {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -318,15 +310,15 @@ body{
 
 }
 
-#boxbox{
+#boxbox {
     width: 100%;
     display: flex;
     justify-content: center;
-    position : absolute;
+    position: absolute;
     z-index: 999999;
 }
 
-#cadre{
+#cadre {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -337,9 +329,43 @@ body{
 }
 
 
-#img_pokemon{   
+#img_pokemon {
     max-width: 70%;
     max-height: 100px;
     width: auto;
-    height: autof;
+    height: auto;
+}
+
+
+/* 3D EFFECT */
+
+#pokemon_container:hover{
+    box-shadow: 10px 10px black;
+}
+
+#noise{
+    position: absolute;
+    z-index: -1;
+}
+
+#box_pokemon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+#pokemon_container{
+    width: auto;
+}
+
+#atk, #cadre, #carte-header{
+    position: relative;
+    z-index: 3;
+}
+
+body {
+    overscroll-behavior-y: none;
 }
