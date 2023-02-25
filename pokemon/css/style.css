@@ -339,8 +339,14 @@ h1 {
 
 /* 3D EFFECT */
 
-#pokemon_container:hover{
-    box-shadow: 10px 10px black;
+#carte{
+    transition: 500ms ease-in-out;
+}
+
+#carte:hover{
+
+    box-shadow: 0px 5px 20px 5px #00000044;
+
 }
 
 #noise{
@@ -359,6 +365,7 @@ h1 {
 
 #pokemon_container{
     width: auto;
+    transition: 300ms ease-in-out;
 }
 
 #atk, #cadre, #carte-header{
@@ -369,3 +376,10 @@ h1 {
 body {
     overscroll-behavior-y: none;
 }
+
+#pokemon_container:hover{
+    transform: scale3d(1.07,1.07,1.07);
+
+}
+
+

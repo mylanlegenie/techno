@@ -428,37 +428,37 @@ if (is_null($bg)) {
 <script>
     setNewBg("<?php echo $color ?>");
 
-    //Retourne la position absolue d'un objet
-    function findPos(obj) {
-        var curleft = curtop = 0;
-        if (obj.offsetParent) {
-            curleft = obj.offsetLeft
-            curtop = obj.offsetTop
-            while (obj = obj.offsetParent) {
-                curleft += obj.offsetLeft
-                curtop += obj.offsetTop
-            }
-        }
-        return [curleft, curtop];
-    }
+    // //Retourne la position absolue d'un objet
+    // function findPos(obj) {
+    //     var curleft = curtop = 0;
+    //     if (obj.offsetParent) {
+    //         curleft = obj.offsetLeft
+    //         curtop = obj.offsetTop
+    //         while (obj = obj.offsetParent) {
+    //             curleft += obj.offsetLeft
+    //             curtop += obj.offsetTop
+    //         }
+    //     }
+    //     return [curleft, curtop];
+    // }
 
 
-    function placeNoise() {
-        var noise = document.getElementById("noise");
+    // function placeNoise() {
+    //     var noise = document.getElementById("noise");
 
-        var carte = document.getElementById("carte");
+    //     var carte = document.getElementById("carte");
 
-        var pos = findPos(carte);
+    //     var pos = findPos(carte);
 
-        noise.style.left = pos[0];
-        noise.style.top = pos[1] -190;
-    }
+    //     noise.style.left = pos[0];
+    //     noise.style.top = pos[1] -190;
+    // }
 
-    placeNoise();
+    // placeNoise();
 
-    window.addEventListener('resize', function (event) {
-        placeNoise();
-    }, true);
+    // window.addEventListener('resize', function (event) {
+    //     placeNoise();
+    // }, true);
 
 
 
