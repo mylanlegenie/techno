@@ -51,8 +51,17 @@ if (!(empty($_GET['pokemon']))) {
     $my_pokemon = 1;
 }
 
+if ($my_pokemon =="mahrez"){
 
-$pokemon = getPokemon($my_pokemon);
+    $attaques = [["nom" => "Coup de pied", "power" => 12345], ["nom" => "Sprint", "power" => 2345]];
+
+
+    $pokemon =  ["nom" => "Mahrez", "pv" => 13, "type" => "genie", "attaques" => $attaques, "image" => "https://www.mancity.com/meta/media/3mjhpfve/riyad-mahrez.png", "id" => 900, "taille" => 13, "poids" => 14];
+}
+else{
+    $pokemon = getPokemon($my_pokemon);
+}
+
 
 $colors = [
     "electric" => "#ffd324",
@@ -70,7 +79,8 @@ $colors = [
     "steel" => "#B6BEC1",
     "dragon" => "#e0b63b",
     "rock" => "#d67e2c",
-    "fairy" => "#b0386d"
+    "fairy" => "#b0386d",
+    "genie"=> '#afcaf2'
 
 ];
 
@@ -135,6 +145,7 @@ if (is_null($bg)) {
     <img src="<?php echo $pokemon['image']; ?>" alt="Cursor" class="cursor" />
     <img src="<?php echo $pokemon['image']; ?>" alt="Cursor" class="maincursor" />
 
+
     <div id="boxbox">
         <div id="box">
             <form action="index.php" id="form_pokemon">
@@ -161,7 +172,9 @@ if (is_null($bg)) {
         <div id="pokemon_container">
 
 
+
             <div id="carte">
+              
                 <div id="carte-header">
                     <div>
                         <p>BASE</p>
@@ -239,6 +252,7 @@ if (is_null($bg)) {
 
             </div>
 
+            <div id="glow"></div>
         </div>
         <!-- <div id="footer">
                 <div>
@@ -392,9 +406,17 @@ if (is_null($bg)) {
                 "left": e.clientX - 10,
                 "top": e.clientY - 10
             });
+
             $(".maincursor").css({
                 "left": e.clientX - 10,
                 "top": e.clientY - 10
+            });
+
+            var position = $($("#pokemon_container")).offset();
+
+            $("#glow").css({
+                "left": e.clientX - 35 - position.left,
+                "top": e.clientY - 35 - position.top
             });
         }).mouseout(function () {
             $(".cursor").hide();
@@ -429,18 +451,20 @@ if (is_null($bg)) {
 
 <script>
 
-var pokemonContain = document.getElementById("pokemon_container");
+    var pokemonContain = document.getElementById("pokemon_container");
 
-var carte = document.getElementById("carte");
+    var carte = document.getElementById("carte");
 
-
-pokemonContain.addEventListener('click', () => {
-
-carte.classList.toggle("flipped");
+    var angle = 0;
 
 
+    pokemonContain.addEventListener('click', () => {
 
-}, true)
+        angle = angle + 180;
+
+        carte.style.transform = "rotateY(" + angle + "deg)";
+
+    }, true);
 
 
 

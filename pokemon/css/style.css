@@ -347,7 +347,10 @@ h1 {
 
     box-shadow: 0px 5px 20px 5px #00000044;
 
+
 }
+
+
 
 #noise{
     position: absolute;
@@ -417,6 +420,18 @@ body {
     height: 420px;
 }
 
-.flipped {
-    transform: rotateY(180deg);
+
+#glow {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    
+    background-image: radial-gradient(circle at 50% 50%, #ffffffe2, #ffffff55, #00000000,  #00000000);
+
+   mix-blend-mode: soft-light;
+
+
   }
