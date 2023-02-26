@@ -223,6 +223,9 @@ if (is_null($bg)) {
 
 
                 </div>
+                <div id="back">
+                    <img src="img/backofcard.png" alt="Back of the card">
+                </div>
                 <svg id="noise" xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'
                     style="width:290px;aspect-ratio: 29/40;">
 
@@ -425,56 +428,21 @@ if (is_null($bg)) {
 </script>
 
 <script>
-    const card = document.getElementById('pokemon_container');
-    const debug = document.getElementById("debug");
-    let bounds;
 
-    function rotateToMouse(e) {
-        const mouseX = e.clientX;
-        const mouseY = e.clientY;
-        const leftX = mouseX - bounds.x;
-        const topY = mouseY - bounds.y;
-        const center = {
-            x: leftX - bounds.width / 2,
-            y: topY - bounds.height / 2
-        }
+var pokemonContain = document.getElementById("pokemon_container");
 
-        const distance = Math.sqrt(center.x ** 2 + center.y ** 2);
-
-        let angle = Math.log(distance) * 15;
-
-        if (center.x <=0){
-            angle = - angle;
-        }
-
-        debug.innerHTML = "rotate3d(" + center.x/100 + "," + center.y/100 + ",0," + angle + "deg)";
+var carte = document.getElementById("carte");
 
 
-        console.log()
+pokemonContain.addEventListener('click', () => {
 
-        console.log(center.x);
+carte.classList.toggle("flipped");
 
-        card.style.transform = "scale3d(1.07, 1.07, 1.07) rotateY(" + angle + "deg)";
 
-        //         $card.querySelector('.glow').style.backgroundImage = `
-        //     radial-gradient(
-        //       circle at
-        //       ${center.x * 2 + bounds.width / 2}px
-        //       ${center.y * 2 + bounds.height / 2}px,
-        //       #ffffff55,
-        //       #0000000f
-        //     )
-        //   `;
-    }
 
-    card.addEventListener('mouseenter', () => {
-        bounds = card.getBoundingClientRect();
-        document.addEventListener('mousemove', rotateToMouse);
-    });
+}, true)
 
-    card.addEventListener('mouseleave', () => {
-        document.removeEventListener('mousemove', rotateToMouse);
-        card.style.transform = '';
-        card.style.background = '';
-    });
+
+
+
 </script>
