@@ -129,5 +129,11 @@ h3{
 }
 
 #footer_{
-        margin-top: 140px;
+    margin-top: 140px;
+}
+
+#tt{
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 100%;
 }

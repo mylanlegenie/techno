@@ -1,6 +1,11 @@
 <?php
 
 
+if (!(empty($_GET["gaufre"]))){
+    header("Location: https://google.fr");
+    exit();
+}
+
 function getAttStats($url)
 {
     $response = file_get_contents($url);
@@ -51,12 +56,10 @@ if (!(empty($_GET['pokemon']))) {
     $my_pokemon = 1;
 }
 
-if ($my_pokemon =="mahrez"){
+if ($my_pokemon =="elon musk"){
 
-    $attaques = [["nom" => "Coup de pied", "power" => 12345], ["nom" => "Sprint", "power" => 2345]];
-
-
-    $pokemon =  ["nom" => "Mahrez", "pv" => 13, "type" => "genie", "attaques" => $attaques, "image" => "https://www.mancity.com/meta/media/3mjhpfve/riyad-mahrez.png", "id" => 900, "taille" => 13, "poids" => 14];
+    $attaques = [["nom" => "Sprint", "power" => 14], ["nom" => "Coup de pied", "power" => 10]];
+    $pokemon =  ["nom" => "Elon", "pv" => 75, "type" => "genie", "attaques" => $attaques, "image" => "https://www.pngplay.com/wp-content/uploads/13/Mahrez-Manchester-City-Transparent-File.png", "id" => 900, "taille" => 13, "poids" => 50];
 }
 else{
     $pokemon = getPokemon($my_pokemon);
@@ -237,7 +240,17 @@ if (is_null($bg)) {
 
                 </div>
                 <div id="back">
-                    <img src="img/backofcard.png" alt="Back of the card">
+                    <?php
+
+                    if ($my_pokemon=="elon musk"){
+                        echo " <img src='img/specialback.png' alt='Back of the card'>";
+                    }
+                    else{
+                        echo " <img src='img/backofcard.png' alt='Back of the card'>";
+                    }
+
+                    ?>
+                   
                 </div>
                 <svg id="noise" xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'
                     style="width:290px;aspect-ratio: 29/40;">
